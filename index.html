@@ -316,50 +316,172 @@
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Certification</h1>
-            <h2 class="mb-4">Certification</h2>
-            <!-- <p>Seasoned Senior Data Analyst with 5+ years of experience driving business strategies through data-driven insights. Proven expertise in data science, statistical analysis, machine learning algorithms and project management.</p> -->
-			 <div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">Infosys</span>
-						<h2>Introduction to Data Science</h2>
-						<div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/dsc.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
+          	<h1 class="big big-2"></h1>
+            <h2 class="mb-4"></h2>
+        <!--start certification-->
+			<section id="certifications" style="font-family: 'Poppins', sans-serif; background-color: #f8f9fc; padding: 60px 0;">
+  <style>
+    #certifications .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #004aad;
+      margin-bottom: 50px;
+      font-weight: 600;
+    }
 
-                <h1 class="heading"><a href="https://drive.google.com/file/d/12mspDyrpo_cFA-3KmAphBegV3Sj3x0hV/view?usp=drivesdk">Successfully completed the ‘Introduction to Data Science’ course by Infosys Springboard, gaining foundational knowledge in data analysis, statistics, and machine learning concepts. This certification strengthened my skills in understanding data-driven decision-making and analytical problem-solving.</a></h3>
-                
-              </div>
-            </div>
-          </div>
-					</div>
+    #certifications .certification-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      justify-content: center;
+      padding: 0 50px;
+    }
 
-				</div>
+    #certifications .certificate-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeUp 0.8s ease;
+    }
 
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">Simplilearn | Skillup</span>
-						<h2>Front End Development</h2>
-						<div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/fdc.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
+    #certifications .certificate-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
 
-                <h3 class="heading"><a href="https://drive.google.com/file/d/12zpbaiHKF4mcBvcaNlv4QYCZzRgS1XBQ/view?usp=drivesdk">Successfully completed the ‘Introduction to Front End Development’ course by Simplilearn SkillUp, gaining practical knowledge of HTML, CSS, and JavaScript for building responsive user interfaces. This certification enhanced my ability to design and develop interactive, visually appealing web applications.</a></h3>
-                
-              </div>
-            </div>
-          </div>
-					</div>
+    #certifications .certificate-img {
+      width: 100%;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.4s ease;
+    }
 
-				</div>
+    #certifications .certificate-img:hover {
+      transform: scale(1.05);
+    }
+
+    #certifications h3 {
+      margin: 15px 0 10px;
+      color: #333;
+      font-size: 1.2rem;
+    }
+
+    #certifications p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Modal (Popup) */
+    #imageModal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    #imageModal img {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      border-radius: 10px;
+      animation: zoomIn 0.5s ease;
+    }
+
+    #imageModal #caption {
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+    }
+
+    #imageModal .close {
+      position: absolute;
+      top: 30px;
+      right: 45px;
+      color: #fff;
+      font-size: 40px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    #imageModal .close:hover {
+      color: #ff4757;
+    }
+
+    /* Animations */
+    @keyframes zoomIn {
+      from {transform: scale(0.7);}
+      to {transform: scale(1);}
+    }
+
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+
+  <h2 class="section-title">Certifications</h2>
+
+  <div class="certification-container">
+    <!-- Certificate 1 -->
+    <div class="certificate-card">
+      <img src="images/dsc.jpg" alt="Infosys Data Science" class="certificate-img" onclick="openModal(this)">
+      <h3>Introduction to Data Science</h3>
+      <p>Completed course by Infosys Springboard, gaining foundational knowledge in data analytics and machine learning.</p>
+    </div>
+
+    <!-- Certificate 2 -->
+    <div class="certificate-card">
+      <img src="images/fdc.jpg" alt="Simplilearn Frontend" class="certificate-img" onclick="openModal(this)">
+      <h3>Front End Development</h3>
+      <p>Completed course by Simplilearn SkillUp, learning HTML, CSS, and JavaScript for responsive web design.</p>
+    </div>
+
+    <!-- Add more certificates below -->
+    <!-- Example:
+    <div class="certificate-card">
+      <img src="images/certificate3.jpg" alt="Python Programming" class="certificate-img" onclick="openModal(this)">
+      <h3>Python Programming</h3>
+      <p>Completed advanced course on Python programming and automation.</p>
+    </div>
+    -->
+  </div>
+
+  <!-- Modal -->
+  <div id="imageModal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img id="modalImage">
+    <div id="caption"></div>
+  </div>
+
+  <script>
+    function openModal(img) {
+      document.getElementById("imageModal").style.display = "block";
+      document.getElementById("modalImage").src = img.src;
+      document.getElementById("caption").innerHTML = img.alt;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
+</section>
+
 			</div>
           </div>
         </div>
+
+
+		
 
 		<!-- <div class="row">
 			<h1 class="big-4">Experience</h1>
